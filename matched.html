@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>matchEd — Laura Bloch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#181a22;
+    --paper:#faf8f5;
+    --accent:#7a2e3a;
+    --accent-soft:#c99aa2;
+    --muted:#8a8580;
+    --line:#e3ded9;
+    --display-font:'Fraunces', Georgia, serif;
+    --text-font:'Inter', -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--text-font);
+    font-size:1.06rem;
+    line-height:1.7;
+  }
+  a{color:var(--accent);}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px 0 72px;}
+  @media (max-width:700px){ .wrap{padding:0 24px 0 36px;} }
+
+  .back{
+    display:inline-block;
+    padding-top:56px;
+    padding-bottom:20px;
+    font-size:0.9rem;
+    text-decoration:none;
+    color:var(--muted);
+  }
+  .back:hover{color:var(--accent);}
+
+  header.hero{padding-bottom:48px;border-bottom:1px solid var(--line);}
+  .eyebrow{font-size:0.85rem;color:var(--muted);margin:0 0 12px;}
+  h1{
+    font-family:var(--display-font);
+    font-weight:650;
+    font-size:clamp(2rem,5vw,3rem);
+    line-height:1.08;
+    margin:0 0 20px;
+    color:var(--ink);
+  }
+  .lede{
+    font-size:1.25rem;
+    max-width:44ch;
+    color:var(--ink);
+    margin:0;
+  }
+
+  main{padding:44px 0 80px;}
+  main p{margin:0 0 22px;max-width:64ch;}
+  main h2{
+    font-family:var(--display-font);
+    font-weight:650;
+    font-size:1.3rem;
+    color:var(--accent);
+    margin:36px 0 16px;
+  }
+  .credit{
+    font-size:0.9rem;
+    color:var(--muted);
+    margin:0 0 32px;
+    max-width:60ch;
+  }
+  .credit a{color:var(--accent);}
+  .kicker{
+    font-size:0.78rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin:36px 0 10px;
+    font-weight:600;
+  }
+
+  .hero-graphic{margin:0 0 20px;}
+  .hero-graphic img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:4px;
+  }
+
+  .gallery{margin:36px 0;}
+  .gallery figure{margin:0 0 32px;}
+  .gallery img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:4px;
+    border:1px solid var(--line);
+  }
+  .gallery figcaption{
+    font-size:0.85rem;
+    color:var(--muted);
+    margin-top:10px;
+  }
+
+  footer{padding:40px 0 80px;border-top:1px solid var(--line);font-size:0.92rem;color:var(--muted);}
+  footer a{color:var(--accent);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; Laura Bloch</a>
+</div>
+
+<header class="hero wrap">
+  <p class="eyebrow">Platform</p>
+  <h1>matchEd</h1>
+  <p class="lede">Connecting education students with in-service teachers for mentorship and placement.</p>
+</header>
+
+<main class="wrap">
+<figure class="hero-graphic">
+  <img src="images/matched-how-it-works.png" alt="matchEd how it works: signup/login, browse, connect, schedule and approve, you've been matchEd" />
+</figure>
+
+<p class="credit">Designed by Laura Bloch, M.A. Instructional Technology &amp; Media, with Joan Calandria-Nelson, M.A. Technology Specialist; Dongxin Li, M.A. Instructional Technology &amp; Media; and Zhe Shi, M.A. Communication &amp; Education.</p>
+
+<p class="kicker">Problem</p>
+<p>Education students and in-service teachers have a hard time finding and connecting with each other for observation and mentorship opportunities.</p>
+
+<div class="gallery">
+  <figure>
+    <img src="images/matched-search-engine.png" alt="matchEd search engine screen showing location-based browsing and customizable filters" />
+    <figcaption>Search engine — location-based browsing, profiles, and customizable filters by grade level, subject, and pedagogy.</figcaption>
+  </figure>
+</div>
+
+<p class="kicker">Goal</p>
+<p>matchEd aims to connect education students and in-service teachers to help facilitate inquiry, observation, student-teaching, and reflection.</p>
+
+<div class="gallery">
+  <figure>
+    <img src="images/matched-communication.jpg" alt="matchEd communication screens showing messaging, scheduling, and approval" />
+    <figcaption>Communication — in-app messaging, easy scheduling, and a simple request-and-approval flow.</figcaption>
+  </figure>
+  <figure>
+    <img src="images/matched-itinerary.jpg" alt="matchEd visits screen showing a synced itinerary and notes" />
+    <figcaption>Observe — visits sync to your calendar with a summarized itinerary and space to take notes.</figcaption>
+  </figure>
+  <figure>
+    <img src="images/matched-summary-log.png" alt="matchEd notes screen showing a summary and reflection log" />
+    <figcaption>Reflect — favorite and recommend profiles, then keep a summary and reflection log you can share or archive.</figcaption>
+  </figure>
+  <figure>
+    <img src="images/matched-other-features.png" alt="matchEd profile screen showing an online portfolio and observation records" />
+    <figcaption>Apply — build an online portfolio with a running record of observation and mentorship experience.</figcaption>
+  </figure>
+</div>
+</main>
+
+<footer class="wrap">
+  <p>Based in Columbus, Ohio. Reach me at <a href="mailto:laura.r.bloch@gmail.com">laura.r.bloch@gmail.com</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Making with Monsters — Laura Bloch</title>
+<meta name="description" content="Teaching girls to expect challenges as a natural part of the making process, and to build strategies, emotional intelligence, and growth mindset." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#181a22;
+    --paper:#faf8f5;
+    --accent:#7a2e3a;
+    --accent-soft:#c99aa2;
+    --muted:#8a8580;
+    --line:#e3ded9;
+    --display-font:'Fraunces', Georgia, serif;
+    --text-font:'Inter', -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--text-font);
+    font-size:1.06rem;
+    line-height:1.7;
+  }
+  a{color:var(--accent);}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px 0 72px;}
+  @media (max-width:700px){ .wrap{padding:0 24px 0 36px;} }
+
+  .back{
+    display:inline-block;
+    padding-top:56px;
+    padding-bottom:20px;
+    font-size:0.9rem;
+    text-decoration:none;
+    color:var(--muted);
+  }
+  .back:hover{color:var(--accent);}
+
+  header.hero{padding-bottom:48px;border-bottom:1px solid var(--line);}
+  .eyebrow{font-size:0.85rem;color:var(--muted);margin:0 0 12px;}
+  h1{
+    font-family:var(--display-font);
+    font-weight:650;
+    font-size:clamp(2rem,5vw,3rem);
+    line-height:1.08;
+    margin:0 0 20px;
+    color:var(--ink);
+  }
+  .lede{
+    font-size:1.25rem;
+    max-width:44ch;
+    color:var(--ink);
+    margin:0;
+  }
+
+  main{padding:44px 0 80px;}
+  main p{margin:0 0 22px;max-width:64ch;}
+  .credit{
+    font-size:0.9rem;
+    color:var(--muted);
+    margin:0 0 32px;
+    max-width:60ch;
+  }
+  .kicker{
+    font-size:0.78rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin:36px 0 10px;
+    font-weight:600;
+  }
+
+  .video-wrap{
+    position:relative;
+    width:100%;
+    max-width:560px;
+    aspect-ratio:16/9;
+    margin:12px 0 32px;
+    border-radius:4px;
+    overflow:hidden;
+    background:#000;
+  }
+  .video-wrap iframe{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    border:0;
+  }
+
+  .gallery{margin:28px 0;}
+  .gallery figure{margin:0 0 32px;}
+  .gallery img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:4px;
+    border:1px solid var(--line);
+  }
+  .gallery figcaption{
+    font-size:0.85rem;
+    color:var(--muted);
+    margin-top:10px;
+  }
+
+  .iteration{margin:0 0 40px;}
+  .iteration h3{
+    font-family:var(--text-font);
+    font-weight:600;
+    font-size:1rem;
+    margin:0 0 12px;
+    color:var(--ink);
+  }
+  .iteration h3 span{
+    display:block;
+    font-size:0.78rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:600;
+    margin-bottom:4px;
+  }
+  .iteration img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:4px;
+    border:1px solid var(--line);
+  }
+
+  .insights{
+    border-left:3px solid var(--accent-soft);
+    padding:4px 0 4px 22px;
+    margin:36px 0;
+  }
+  .insights ul{margin:0;padding-left:20px;}
+  .insights li{margin-bottom:6px;}
+
+  .refs{
+    font-size:0.86rem;
+    color:var(--muted);
+    line-height:1.65;
+  }
+  .refs li{margin-bottom:12px;}
+  .refs ul{padding-left:20px;margin:0;}
+
+  footer{padding:40px 0 80px;border-top:1px solid var(--line);font-size:0.92rem;color:var(--muted);}
+  footer a{color:var(--accent);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; Laura Bloch</a>
+</div>
+
+<header class="hero wrap">
+  <p class="eyebrow">Curriculum · Prototype</p>
+  <h1>Making with Monsters</h1>
+  <p class="lede">Teaching girls to expect challenges as a natural part of the making process.</p>
+</header>
+
+<main class="wrap">
+<p class="credit">Laura Bloch, M.A. Instructional Technology &amp; Media<br />Maria Lopez-Delgado, M.A. Design and Development of Digital Games</p>
+
+<p class="kicker">Problem</p>
+<p>Girls, more than boys, tend to assume their encounters with challenges or failures are due to their own inabilities or inadequacies, and consequently give up.</p>
+
+<div class="video-wrap">
+  <iframe src="https://www.youtube.com/embed/7JLYckRgo8U" title="Making With Monsters Prototype Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<p class="kicker">Goal</p>
+<p>"Making with Monsters" aims to teach girls to expect challenges as a natural part of the making process, teach them strategies to face challenges, and increase their emotional intelligence and growth mindset.</p>
+
+<p class="kicker">Rationale</p>
+<p>The application prompts girls to begin the making process by contemplating the problem-solving strategies they will need. By helping them to expect and accept the inevitability of challenges, the design aims to increase girls' sense of agency and growth mindsets.</p>
+
+<div class="gallery">
+  <figure>
+    <img src="images/mwm-claim-trophy.png" alt="Prototype screen titled 'Claim Your Trophy' asking how you're feeling and which monster was most helpful" />
+    <figcaption>Claiming the trophy — reflecting on the feeling and on which strategy actually worked.</figcaption>
+  </figure>
+  <figure>
+    <img src="images/mwm-helper-monsters.jpg" alt="Prototype screen asking 'What monsters might help you on your journey?' with eight strategy cards" />
+    <figcaption>Choosing strategies — each helper monster represents a concrete problem-solving move, from looking it up to asking an expert.</figcaption>
+  </figure>
+</div>
+
+<p class="kicker">Field Observations</p>
+<p>We visited the New York Hall of Science and Dazzling Discoveries' Makerspace, where children were involved in the act of making. We noticed that children, especially girls, showed frustration and sadness when faced with challenges or failures. Many didn't appear to have the strategies or desire to overcome their challenges.</p>
+
+<p class="kicker">Iterations</p>
+
+<div class="iteration">
+  <h3><span>Iteration 1</span>"Hall of Fail"</h3>
+  <img src="images/mwm-hall-of-fail.png" alt="Hall of Fail page showing cards documenting failed builds with descriptions, lessons learned, and comments" />
+</div>
+
+<div class="iteration">
+  <h3><span>Iteration 2</span>Challenges as branches on a tree</h3>
+  <img src="images/mwm-reflection-tree.jpg" alt="Student reflection page showing a hand-drawn tree with challenges and lessons written on its branches, beside a feed of classmates' challenges" />
+</div>
+
+<div class="insights">
+  <p class="kicker" style="margin-top:0;">User Insights</p>
+  <ul>
+    <li>Saw "monsters" as friends</li>
+    <li>Expected monsters to help solve problems</li>
+    <li>Eager to share knowledge with each other</li>
+    <li>Anticipated challenges</li>
+  </ul>
+</div>
+
+<div class="iteration">
+  <h3><span>Iteration 3</span>Monsters as challenges to be defeated</h3>
+  <img src="images/mwm-battling.png" alt="Prototype screen asking 'What monster are you battling?' with cards for Missing supply monster and Doesn't turn on monster" />
+</div>
+
+<div class="iteration">
+  <h3><span>Iteration 4</span>Monsters as challenges to be defeated with powers</h3>
+  <img src="images/mwm-feeling-power.jpg" alt="Prototype screen asking 'How are you feeling?' with five faces and 'What power will you use to defeat this monster?' with strategy cards" />
+</div>
+
+<p class="kicker">Research</p>
+<p>Different scholars have confirmed that children see failure as a reflection of their own abilities, and that it's even more prevalent in girls (Altermatt &amp; Broady, 2009) (Dweck, 1986; Dweck &amp; Leggett, 1988). As cited by Dai (2002), girls often react to failure by giving up, doubting their capabilities, and reacting with annoyance and sadness.</p>
+<p>When confronted with challenges, it can be more difficult for girls to accept "letting themselves down" than it is for boys (Carpenter, 2009). Dweck (1987) also highlights the fact that girls often don't see past successes in confronting challenges as an indicator that they may be capable of solving similar problems.</p>
+<p>Sadler et al. (2012) observed that girls' interest in STEM-related fields is decreasing in high schools. Additionally, girls were shown to react better to STEM-related areas when the activities involved collaborative work, creativity, hands-on experiences and real-world applications (Cooper, R. &amp; Heaverlo C., 2013).</p>
+
+<p class="kicker">References</p>
+<div class="refs">
+<ul>
+  <li>Altermatt, E. R., &amp; Broady, E. F. (2009). Coping with achievement-related failure: An examination of conversations between friends. <em>Merrill-Palmer Quarterly: Journal of Developmental Psychology</em>, 55(4), 454–457.</li>
+  <li>Borasi, R. (1994). Capitalizing on Errors as "Springboards for Inquiry": A Teaching Experiment. <em>Journal for Research in Mathematics Education</em>, 25(2), 166–208. doi:10.2307/749507.</li>
+  <li>Carpenter, Peter (2009). Failure in Education. <em>FORUM</em>, 51(1), 35–40. http://doi.org/10.2304/forum.2009.51.1.35.</li>
+  <li>Dweck, C. S. (2006). <em>Mindset: The new psychology of success</em>. New York: Random House.</li>
+  <li>Dweck, C. S. (2007). Is Math a Gift? Beliefs That Put Females at Risk. In S. J. Ceci &amp; W. M. Williams (Eds.), <em>Why aren't more women in science?: Top researchers debate the evidence</em> (pp. 47–55). Washington, DC, US: American Psychological Association.</li>
+  <li>Gorman, M. E., Plucker, J. A., &amp; Callahan, C. M. (1998). Turning Students into Inventors: Active Learning Modules for Secondary Students. <em>Phi Delta Kappan</em>, 79(7), 530–535.</li>
+  <li>Lottero-Perdue, Pamela S. and Parry, Elizabeth A. (2017) "Perspectives on Failure in the Classroom by Elementary Teachers New to Teaching Engineering," <em>Journal of Pre-College Engineering Education Research (J-PEER)</em>: Vol. 7: Iss. 1, Article 4. https://doi.org/10.7771/2157-9288.1158</li>
+  <li>Maltese, A., Simpson, A., &amp; Anderson, A. (2018). Failing to Learn: The impact of failure during making activities. <em>Thinking Skills and Creativity</em>, 30, 116–124. https://doi.org/10.1016/j.tsc.2018.01.003</li>
+  <li>Martinez, M. E. (1998). What is Problem Solving. <em>Phi Delta Kappan</em>, 79(8), 605–609.</li>
+  <li>Ryoo, J. J., Bulalacao, N., Kekelis, L., McLeod, E., &amp; Henriquez, B. (2015). Tinkering with "Failure": Equity, Learning, and the Iterative Design Process. <em>FabLearn Conference 2015</em> at Stanford University, September 2015.</li>
+</ul>
+</div>
+</main>
+
+<footer class="wrap">
+  <p>Based in Columbus, Ohio. Reach me at <a href="mailto:laura.r.bloch@gmail.com">laura.r.bloch@gmail.com</a>.</p>
+</footer>
+</body>
+</html>

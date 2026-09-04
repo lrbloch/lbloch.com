@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Augmented Reality Travel Map — Laura Bloch</title>
+<meta name="description" content="An augmented-reality map of my travels throughout the world, using collected city pins as AR targets." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#181a22;
+    --paper:#faf8f5;
+    --accent:#7a2e3a;
+    --accent-soft:#c99aa2;
+    --muted:#8a8580;
+    --line:#e3ded9;
+    --display-font:'Fraunces', Georgia, serif;
+    --text-font:'Inter', -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--text-font);
+    font-size:1.06rem;
+    line-height:1.7;
+  }
+  a{color:var(--accent);}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px 0 72px;}
+  @media (max-width:700px){ .wrap{padding:0 24px 0 36px;} }
+
+  .back{
+    display:inline-block;
+    padding-top:56px;
+    padding-bottom:20px;
+    font-size:0.9rem;
+    text-decoration:none;
+    color:var(--muted);
+  }
+  .back:hover{color:var(--accent);}
+
+  header.hero{padding-bottom:48px;border-bottom:1px solid var(--line);}
+  .eyebrow{font-size:0.85rem;color:var(--muted);margin:0 0 12px;}
+  h1{
+    font-family:var(--display-font);
+    font-weight:650;
+    font-size:clamp(2rem,5vw,3rem);
+    line-height:1.08;
+    margin:0 0 20px;
+    color:var(--ink);
+  }
+  .lede{
+    font-size:1.25rem;
+    max-width:44ch;
+    color:var(--ink);
+    margin:0;
+  }
+
+  main{padding:44px 0 80px;}
+  main p{margin:0 0 22px;max-width:64ch;}
+  .kicker{
+    font-size:0.78rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin:44px 0 10px;
+    font-weight:600;
+  }
+  main ol{max-width:64ch;padding-left:22px;margin:0 0 22px;}
+  main ol li{margin-bottom:8px;}
+
+  figure{margin:28px 0;}
+  figure img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:4px;
+    border:1px solid var(--line);
+  }
+  figcaption{
+    font-size:0.85rem;
+    color:var(--muted);
+    margin-top:10px;
+  }
+  .hero-figure{margin:0 0 28px;}
+
+  .trio{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin:32px 0;
+    align-items:start;
+  }
+  .trio figure{margin:0;}
+  .trio img{aspect-ratio:4/3;object-fit:cover;}
+  @media (max-width:640px){ .trio{grid-template-columns:1fr;} }
+
+  .video-wrap{
+    position:relative;
+    width:100%;
+    max-width:560px;
+    aspect-ratio:16/9;
+    margin:28px 0;
+    border-radius:4px;
+    overflow:hidden;
+    background:#000;
+  }
+  .video-wrap iframe{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    border:0;
+  }
+
+  .musings{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+    margin:24px 0;
+  }
+  .musings article{margin:0;}
+  .musings img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:4px;
+    border:1px solid var(--line);
+    aspect-ratio:3/2;
+    object-fit:cover;
+  }
+  .musings h3{
+    font-family:var(--display-font);
+    font-weight:650;
+    font-size:1.15rem;
+    margin:14px 0 8px;
+    color:var(--ink);
+  }
+  .musings p{font-size:0.95rem;margin:0 0 8px;}
+  .musings time{font-size:0.85rem;color:var(--muted);}
+  @media (max-width:600px){ .musings{grid-template-columns:1fr;} }
+
+  footer{padding:40px 0 80px;border-top:1px solid var(--line);font-size:0.92rem;color:var(--muted);}
+  footer a{color:var(--accent);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; Laura Bloch</a>
+</div>
+
+<header class="hero wrap">
+  <p class="eyebrow">Creative Technologies · Physical + Digital</p>
+  <h1>Augmented Reality Travel Map</h1>
+  <p class="lede">An augmented-reality map of my travels throughout the world.</p>
+</header>
+
+<main class="wrap">
+<figure class="hero-figure">
+  <img src="images/ar-watercolor-central-europe-mounted.jpg" alt="Watercolor map of central Europe on canvas, mounted between two wooden dowels, with enamel travel pins marking cities" />
+  <figcaption>Watercolor map of "central Europe" with pins serving as Augmented Reality targets</figcaption>
+</figure>
+
+<p class="kicker">Idea</p>
+<p>As my "Passion Project" for Erin Riley's course <a href="https://www.tc.columbia.edu/myers-media/courses/?accordion=11387533">Studio in Creative Technologies</a>, I am creating an augmented-reality map of my travels across the world. I've collected pins from many of the cities I've visited, so I will use these pins to mark the cities on the map. I developed an augmented-reality app in which one may scan each pin to view photos from my trip to the city where it was purchased.</p>
+
+<div class="video-wrap">
+  <iframe src="https://www.youtube.com/embed/BAAJXC83Axs" title="Augmented Reality Travel Map" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<p class="kicker">Process</p>
+<p>I began with a mind map that developed over a couple of months as I experimented with different technologies such as laser cutting and etching, vinyl cutting, and digital embroidery. Slowly, my concept for AR-enabled maps featuring my collection of pins began to surface.</p>
+
+<figure>
+  <img src="images/ar-process-diagram.png" alt="Process diagram tracing the project from mind map through embroidered map, laser-etched map, watercolor map, and augmented-reality app, with sticky notes recording what worked and what didn't" />
+</figure>
+
+<div class="trio">
+  <figure>
+    <img src="images/ar-embroidered-sevilla.jpg" alt="A city street map embroidered in purple and teal thread on natural canvas" />
+    <figcaption>Digitally-embroidered street map of Seville, Spain</figcaption>
+  </figure>
+  <figure>
+    <img src="images/ar-laser-etched-detail.jpg" alt="Laser-etched map of central Europe burned into canvas with enamel travel pins attached" />
+    <figcaption>Laser-etched map of "central Europe" with pins serving as AR targets</figcaption>
+  </figure>
+  <figure>
+    <img src="images/ar-app-screenshot.jpg" alt="Screenshot of the AR app showing a grid of photos from Rome surrounding the scooter pin, with a Blog button in the center" />
+    <figcaption>Screenshot of AR app prototype created in Unity with Vuforia</figcaption>
+  </figure>
+</div>
+
+<p>My initial idea was to digitally embroider each map, but these maps required a level of detail not feasible for the scale of my project. Next, my instructor suggested I laser etch the maps on canvas. While laser etching was efficient for the scale of my maps, I felt it lacked dimension. I turned to this map on Amazon (below, left) for inspiration and chose to vinyl-cut stencils and water color my maps.</p>
+
+<div class="trio">
+  <figure>
+    <img src="images/ar-watercolor-inspiration.jpg" alt="A colorful watercolor world map illustration by Michael Tompsett" />
+    <figcaption>Map by Michael Tompsett on Amazon</figcaption>
+  </figure>
+  <figure>
+    <img src="images/ar-watercolor-central-europe.jpg" alt="Hand-watercolored map of central Europe on canvas in blues, purples, greens, and yellows" />
+    <figcaption>Initial proof-of-concept using vinyl-cut stencils and water color</figcaption>
+  </figure>
+  <figure>
+    <img src="images/ar-watercolor-western-europe.jpg" alt="Hand-watercolored map of the British Isles, France, Spain, and Portugal on canvas" />
+    <figcaption>Final map of "western Europe"</figcaption>
+  </figure>
+</div>
+
+<p class="kicker">Completed Project</p>
+<p>The completed project consists of two maps and an AR application. The application is open-source and available at <a href="https://github.com/lrbloch/ar_travel_map">github.com/lrbloch/ar_travel_map</a>. The maps are currently hanging on the wall in my living room where guests can interact with them when they visit.</p>
+
+<figure>
+  <img src="images/ar-maps-on-wall.jpg" alt="Laura Bloch standing beside two finished watercolor canvas maps hanging on a wall — western Europe and central Europe" />
+  <figcaption>Me with my completed AR maps</figcaption>
+</figure>
+
+<p class="kicker">Future Work</p>
+<p>Future work on this project includes the following five to-do items:</p>
+<ol>
+  <li>Watercolor US map using laser-cut cardstock stencil</li>
+  <li>Addition of US pins and AR elements</li>
+  <li>Manual creation of new pins for cities where I did not purchase them</li>
+  <li>Digital embroidery of travel paths</li>
+  <li>Addition of miniature maps for countries not yet included: Israel, South Africa, Morocco…</li>
+</ol>
+
+<p class="kicker">Questions, Suggestions, Requests</p>
+<p>Please contact me at <a href="mailto:laura.r.bloch@gmail.com">laura.r.bloch@gmail.com</a> or @laura_bloch</p>
+
+<p class="kicker">Musings</p>
+<div class="musings">
+  <article>
+    <img src="images/ar-maps-on-wall.jpg" alt="Laura Bloch beside the two finished watercolor canvas maps" />
+    <h3>On My Finalized AR Travel Maps</h3>
+    <p>View this post in its entirety on <a href="https://medium.com/@lbloch_">Medium</a>.</p>
+    <p>Last Monday, I presented my finalized Augmented Reality Travel Maps.</p>
+    <time>December 24, 2019</time>
+  </article>
+  <article>
+    <img src="images/ar-vuforia-target-test.jpg" alt="Vuforia image-target test showing a 3D scooter model anchored above a printed tracking pattern" />
+    <h3>On Targets and Augmentation</h3>
+    <p>With my two most important maps complete, the past couple of weeks have been focused on developing my AR app.</p>
+    <time>December 16, 2019</time>
+  </article>
+</div>
+</main>
+
+<footer class="wrap">
+  <p>Based in Columbus, Ohio. Reach me at <a href="mailto:laura.r.bloch@gmail.com">laura.r.bloch@gmail.com</a>.</p>
+</footer>
+</body>
+</html>
